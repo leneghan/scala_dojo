@@ -7,7 +7,7 @@ import org.junit.runner.RunWith
 
 
 @RunWith(classOf[JUnitRunner])
-class MyResponseTests extends FunSuite with ShouldMatchers{
+class MailboxTests extends FunSuite with ShouldMatchers{
 
   test("should return pong when sent ping"){
     val response = new MailBox().handleMsg(Ping)
@@ -15,8 +15,8 @@ class MyResponseTests extends FunSuite with ShouldMatchers{
   }
 
   test("should return ping when sent pong"){
-    val response = new MailBox().handleMsg(Ping)
-    response should equal (Pong)
+    val response = new MailBox().handleMsg(Pong)
+    response should equal (Ping)
   }
 
   test("should return pong when received ping"){
