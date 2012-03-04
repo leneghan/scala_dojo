@@ -19,6 +19,14 @@
             <plugin>
                 <groupId>org.scala-tools</groupId>
                 <artifactId>maven-scala-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <jvmArgs>
                         <jvmArg>-Xms64m</jvmArg>
@@ -66,9 +74,9 @@
             <url>http://akka.io/repository</url>
         </repository>
         <repository>
-            <id>scala-tools.org</id>
-            <name>Scala-tools Maven2 Repository</name>
-            <url>http://scala-tools.org/repo-releases</url>
+          <id>scala-tools.org</id>
+          <name>Scala-tools Maven2 Repository</name>
+          <url>http://scala-tools.org/repo-releases</url>
         </repository>
     </repositories>
 
