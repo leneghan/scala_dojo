@@ -7,25 +7,24 @@
     <groupId>scala_dojo</groupId>
     <artifactId>scala_dojo</artifactId>
     <version>1.0</version>
+
+    <properties>
+		<scala.version>2.9.0</scala.version>
+	</properties>
+
     <build>
+        <sourceDirectory>src/main/scala</sourceDirectory>
+        <testSourceDirectory>src/test/scala</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.scala-tools</groupId>
                 <artifactId>maven-scala-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>compile</goal>
-                            <goal>testCompile</goal>
-                        </goals>
-                    </execution>
-                </executions>
                 <configuration>
-                    <sourceDir>src/main/java</sourceDir>
                     <jvmArgs>
                         <jvmArg>-Xms64m</jvmArg>
                         <jvmArg>-Xmx1024m</jvmArg>
                     </jvmArgs>
+                    <scalaVersion>${scala.version}</scalaVersion>
                 </configuration>
             </plugin>
             <plugin>
@@ -66,6 +65,19 @@
             <name>Akka Maven Repository</name>
             <url>http://akka.io/repository</url>
         </repository>
+        <repository>
+            <id>scala-tools.org</id>
+            <name>Scala-tools Maven2 Repository</name>
+            <url>http://scala-tools.org/repo-releases</url>
+        </repository>
     </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>scala-tools.org</id>
+            <name>Scala-tools Maven2 Repository</name>
+            <url>http://scala-tools.org/repo-releases</url>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>
