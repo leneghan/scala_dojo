@@ -34,9 +34,20 @@ class MailboxTests extends FunSuite with ShouldMatchers{
     response should equal ("stopped")
   }
 
+  test("should throw exception when go message received"){
+    intercept[MatchError] {
+      new MailBox().receive("go")
+    }
+  }
+
   test("should return Hello World when received echo message"){
     val response = new MailBox().receive(("echo", "Hello World"))
     response should equal ("Hello World")
+  }
+
+  test("should return Goodbye World when received echo message with Goodbye World payload"){
+    val response = new MailBox().receive(("echo", "Goodbye World"))
+    response should equal ("Goodbye World")
   }
 
 }
