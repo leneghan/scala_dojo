@@ -65,14 +65,3 @@
     </li>
   </ul>
 </div>
-
-<div class="pageSection" id="labels-section" style="clear: both; margin-bottom: 5px; margin-top: 40px;">
-  <div class="labels-editor">
-    <span class="label-title" id="labels-section-title" style="background-color: white; display: inline; float: left; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 14px; padding-right: 5px; text-align: left;"><b>Labels:</b></span><br /> <div>
-      <b><br /></b>
-    </div>
-    
-    <div class="content-column" id="labels-section-content" style="background-color: white; font-family: Arial, Helvetica, FreeSans, sans-serif; font-size: 14px; line-height: 15px; padding-left: 55px; text-align: left;">
-    </div>
-  </div>
-</div>
