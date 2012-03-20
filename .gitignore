@@ -1,5 +1,4 @@
-*.class
 .DS_Store
-.idea/*
+target
 *.iml
-/target/*
+.idea
